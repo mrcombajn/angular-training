@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HomeComponent } from './home/home.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,17 +9,21 @@ import { AboutusComponent } from './aboutus/aboutus.component';
   imports: [
     HomeComponent,
     AboutusComponent,
+    RouterModule
   ],
   template: `
   <!-- Komponent App -->
     <main>
-      <header class="brand-name">
-        <img class="brand-header" src="/assets/logo.svg">
+    <header class="brand-name">
+        <a [routerLink]="['/']">
+            <img class="brand-header" src="/assets/logo.svg">
+        </a>
       </header>
       <section class="content">
 
         <!-- Import kontrolera home -->
-        <app-home></app-home>
+        <router-outlet></router-outlet>
+        <!-- <app-home></app-home> -->
       </section>
 
       <footer>

@@ -9,6 +9,7 @@
 
 # Dependencies
 /node_modules
+./node_modules
 
 # Cordova
 /www
@@ -58,4 +59,8 @@ testem.log
 
 # System Files
 .DS_Store
+<<<<<<< HEAD
 Thumbs.db
+=======
+Thumbs.db
+>>>>>>> 6bb4763 (added tasks)
